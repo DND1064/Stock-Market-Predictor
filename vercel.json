@@ -1,0 +1,19 @@
+{
+  "builds": [
+    {
+      "src": "app.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "app.py"
+    }
+  ],
+  "env": {
+    "STREAMLIT_SERVER_PORT": "8000",
+    "STREAMLIT_SERVER_ENABLE_CORS": "true",
+    "STREAMLIT_SERVER_ENABLE_WEBSOCKET_CORS": "true"
+  }
+}
